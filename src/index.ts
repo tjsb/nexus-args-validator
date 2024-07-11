@@ -2,6 +2,7 @@ import { plugin } from "nexus";
 import {
   ArgsValue,
   completeValue,
+  formatPathForModuleImport,
   MaybePromise,
   printedGenTyping,
   printedGenTypingImport,
@@ -140,7 +141,7 @@ export const argsValidatorPlugin = ({
         type: "ValidateResolver<TypeName, FieldName>",
         imports: [
           printedGenTypingImport({
-            module: join(__dirname, "."),
+            module: join(formatPathForModuleImport(__dirname), "."),
             bindings: ["ValidateResolver"],
           }),
         ],
@@ -152,7 +153,7 @@ export const argsValidatorPlugin = ({
         type: "TransformResolver<TypeName, FieldName>",
         imports: [
           printedGenTypingImport({
-            module: join(__dirname, "."),
+            module: join(formatPathForModuleImport(__dirname), "."),
             bindings: ["TransformResolver"],
           }),
         ],
