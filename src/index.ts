@@ -141,7 +141,7 @@ export const argsValidatorPlugin = ({
         type: "ValidateResolver<TypeName, FieldName>",
         imports: [
           printedGenTypingImport({
-            module: join(formatPathForModuleImport(__dirname), "."),
+            module: join('nexus-args-validator/dist', "."),
             bindings: ["ValidateResolver"],
           }),
         ],
@@ -153,7 +153,7 @@ export const argsValidatorPlugin = ({
         type: "TransformResolver<TypeName, FieldName>",
         imports: [
           printedGenTypingImport({
-            module: join(formatPathForModuleImport(__dirname), "."),
+            module: join('nexus-args-validator/dist', "."),
             bindings: ["TransformResolver"],
           }),
         ],
