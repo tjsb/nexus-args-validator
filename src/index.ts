@@ -2,7 +2,6 @@ import { plugin } from "nexus";
 import {
   ArgsValue,
   completeValue,
-  formatPathForModuleImport,
   MaybePromise,
   printedGenTyping,
   printedGenTypingImport,
